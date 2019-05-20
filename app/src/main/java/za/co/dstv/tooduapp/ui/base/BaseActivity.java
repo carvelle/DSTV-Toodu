@@ -1,16 +1,10 @@
 package za.co.dstv.tooduapp.ui.base;
 
-import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -49,19 +43,6 @@ public abstract class BaseActivity extends AppCompatActivity
     }
 
 
-    @TargetApi(Build.VERSION_CODES.M)
-    public void requestPermissionsSafely(String[] permissions, int requestCode) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            requestPermissions(permissions, requestCode);
-        }
-    }
-
-    @TargetApi(Build.VERSION_CODES.M)
-    public boolean hasPermission(String permission) {
-        return Build.VERSION.SDK_INT < Build.VERSION_CODES.M ||
-                checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED;
-    }
-
     @Override
     public void showLoading() {
         hideLoading();
@@ -83,6 +64,11 @@ public abstract class BaseActivity extends AppCompatActivity
                 .findViewById(android.support.design.R.id.snackbar_text);
         textView.setTextColor(ContextCompat.getColor(this, R.color.white));
         snackbar.show();
+    }
+
+    @Override
+    public void showMessage(String message){
+        showSnackBar(message);
     }
 
     @Override

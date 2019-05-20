@@ -73,6 +73,10 @@ public abstract class BaseFragment extends Fragment implements BaseView {
         }
     }
 
+    @Override
+    public void showMessage(String message){
+
+    }
 
     public ActivityComponent getActivityComponent() {
         if (mActivity != null) {

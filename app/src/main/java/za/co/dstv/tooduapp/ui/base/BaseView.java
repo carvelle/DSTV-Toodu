@@ -10,4 +10,6 @@ public interface BaseView {
 
     void hideKeyboard();
 
+    void showMessage(String message);
+
 }

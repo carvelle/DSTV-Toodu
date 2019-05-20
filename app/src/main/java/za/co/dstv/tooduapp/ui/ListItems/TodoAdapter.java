@@ -4,7 +4,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
@@ -14,7 +13,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import za.co.dstv.tooduapp.R;
 import za.co.dstv.tooduapp.data.model.TodoItem;
 import za.co.dstv.tooduapp.ui.base.BaseViewHolder;
