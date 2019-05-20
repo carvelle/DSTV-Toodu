@@ -124,11 +124,13 @@ public class TodoAdapter extends RecyclerView.Adapter<BaseViewHolder> {
             if (todoItem.getSubTaskName() != null) {
                 taskSubTitle.setText(todoItem.getSubTaskName());
             }
-            checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            checkBox.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                public void onClick(View v) {
                     if(mCheckboxCallback != null)
-                        mCheckboxCallback.onCheck(compoundButton, todoItem);
+                        mCheckboxCallback.onCheck(((CheckBox)v), todoItem);
+
                 }
             });
 
