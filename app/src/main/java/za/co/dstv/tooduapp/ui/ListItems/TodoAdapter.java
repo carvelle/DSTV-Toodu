@@ -131,7 +131,14 @@ public class TodoAdapter extends RecyclerView.Adapter<BaseViewHolder> {
                         mCheckboxCallback.onCheck(compoundButton, todoItem);
                 }
             });
-            
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(mItemClickListener != null)
+                        mItemClickListener.onItemClick(todoItem, position);
+                }
+            });
         }
     }
 
