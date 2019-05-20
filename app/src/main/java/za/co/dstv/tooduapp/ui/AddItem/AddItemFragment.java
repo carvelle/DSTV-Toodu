@@ -17,6 +17,7 @@ import za.co.dstv.tooduapp.R;
 import za.co.dstv.tooduapp.data.model.TodoItem;
 import za.co.dstv.tooduapp.dependencyInjection.component.ActivityComponent;
 import za.co.dstv.tooduapp.ui.base.BaseFragment;
+import za.co.dstv.tooduapp.utils.AppUtils;
 
 public class AddItemFragment extends BaseFragment  implements AddItemView{
 
@@ -85,6 +86,7 @@ public class AddItemFragment extends BaseFragment  implements AddItemView{
 
             item.setTaskName(task_title.getText().toString());
             item.setSubTaskName(task_sub_title.getText().toString());
+            item.setCreatedAt(AppUtils.getTimeStamp());
 
             mPresenter.saveItem(item);
             task_sub_title.setText(null);

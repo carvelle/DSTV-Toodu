@@ -24,6 +24,7 @@ import za.co.dstv.tooduapp.data.model.TodoItem;
 import za.co.dstv.tooduapp.dependencyInjection.component.ActivityComponent;
 import za.co.dstv.tooduapp.ui.TodoActivity;
 import za.co.dstv.tooduapp.ui.base.BaseFragment;
+import za.co.dstv.tooduapp.utils.AppUtils;
 
 public class ListItemsFragment extends BaseFragment implements ListItemView{
 
@@ -105,10 +106,12 @@ public class ListItemsFragment extends BaseFragment implements ListItemView{
 
                 if(compoundButton.isChecked()){
                     item.setCompleted(true);
+                    item.setUpdatedAt(AppUtils.getTimeStamp());
 
                 }
                 else{
                     item.setCompleted(false);
+                    item.setUpdatedAt(AppUtils.getTimeStamp());
                 }
 
                 mPresenter.updateItem(item);

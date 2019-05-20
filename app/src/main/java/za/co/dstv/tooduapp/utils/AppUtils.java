@@ -38,6 +38,6 @@ public class AppUtils {
     }
 
     public static String getTimeStamp() {
-        return new SimpleDateFormat(Constants.TIMESTAMP_FORMAT, Locale.US).format(new Date());
+        return new SimpleDateFormat(Constants.TIMESTAMP_FORMAT, Locale.UK).format(new Date());
     }
 }
