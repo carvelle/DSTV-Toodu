@@ -56,7 +56,6 @@ public class AddItemFragment extends BaseFragment  implements AddItemView{
             component.inject(this);
             setUnBinder(ButterKnife.bind(this, view));
             mPresenter.onAttach(this);
-            //mTodoAdapter.setCallback(this);
         }
         return view;
     }
@@ -92,6 +91,5 @@ public class AddItemFragment extends BaseFragment  implements AddItemView{
             task_title.setText(null);
             task_title.requestFocus();
         }
-
     }
 }

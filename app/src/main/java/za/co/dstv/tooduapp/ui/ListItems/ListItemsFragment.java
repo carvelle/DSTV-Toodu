@@ -72,7 +72,6 @@ public class ListItemsFragment extends BaseFragment implements ListItemView{
             component.inject(this);
             setUnBinder(ButterKnife.bind(this, view));
             mPresenter.onAttach(this);
-            //mTodoAdapter.setCallback(this);
         }
         return view;
     }

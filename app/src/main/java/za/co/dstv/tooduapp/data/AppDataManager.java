@@ -41,9 +41,5 @@ public class AppDataManager implements DataManager {
         return mDatabaseHelper.updateTodoItem(todoItem);
     }
 
-    @Override
-    public Observable<Boolean> saveTodoItemList(List<TodoItem> todoItems) {
-        return null;
-    }
 }
 

@@ -16,6 +16,4 @@ public interface DatabaseHelper {
     Observable<Boolean> deleteTodoItem(TodoItem todoItem);
 
     Observable<Boolean> updateTodoItem(TodoItem todoItem);
-
-    Observable<Boolean> saveTodoItemList(List<TodoItem> todoItems);
 }

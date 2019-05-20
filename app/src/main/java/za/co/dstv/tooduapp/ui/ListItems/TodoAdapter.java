@@ -24,7 +24,6 @@ public class TodoAdapter extends RecyclerView.Adapter<BaseViewHolder> {
     public static final int VIEW_TYPE_EMPTY = 0;
     public static final int VIEW_TYPE_NORMAL = 1;
 
-    private Callback mCallback;
     private List<TodoItem> mTodoItemList;
 
     private ItemClickListener mItemClickListener;
@@ -34,10 +33,6 @@ public class TodoAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     public TodoAdapter(List<TodoItem> todoItemList) {
         mTodoItemList = todoItemList;
-    }
-
-    public void setCallback(Callback callback) {
-        mCallback = callback;
     }
 
     @Override
@@ -82,9 +77,6 @@ public class TodoAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         notifyDataSetChanged();
     }
 
-    public interface Callback {
-        void onEmptyViewRetryClick();
-    }
 
     public interface CheckboxCallback {
         void onCheck(CompoundButton compoundButton, TodoItem item);
@@ -171,6 +163,5 @@ public class TodoAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         protected void clear() {
 
         }
-
     }
 }

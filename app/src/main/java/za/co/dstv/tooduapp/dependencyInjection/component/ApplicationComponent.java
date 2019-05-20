@@ -1,6 +1,5 @@
 package za.co.dstv.tooduapp.dependencyInjection.component;
 
-import android.app.Application;
 import android.content.Context;
 
 import javax.inject.Singleton;
@@ -19,8 +18,6 @@ public interface ApplicationComponent {
 
     @ApplicationContext
     Context context();
-
-    Application application();
 
     DataManager getDataManager();
 }

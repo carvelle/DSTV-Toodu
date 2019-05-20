@@ -1,27 +1,12 @@
 package za.co.dstv.tooduapp.ui;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
-import java.util.List;
-
-import javax.inject.Inject;
-
-import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import za.co.dstv.tooduapp.R;
-import za.co.dstv.tooduapp.data.model.TodoItem;
 import za.co.dstv.tooduapp.dependencyInjection.component.ActivityComponent;
 import za.co.dstv.tooduapp.ui.AddItem.AddItemFragment;
 import za.co.dstv.tooduapp.ui.ListItems.ListItemsFragment;

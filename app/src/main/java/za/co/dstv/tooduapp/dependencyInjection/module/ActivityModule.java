@@ -73,7 +73,7 @@ public class ActivityModule {
 
 
     @Provides
-    TodoAdapter provideTodoAdapter(AppCompatActivity activity) {
+    TodoAdapter provideTodoAdapter() {
         return new TodoAdapter(new ArrayList<TodoItem>());
     }
 

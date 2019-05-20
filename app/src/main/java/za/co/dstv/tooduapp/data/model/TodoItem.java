@@ -42,7 +42,6 @@ public class TodoItem {
     @Property(nameInDb = "updated_at")
     private String updatedAt;
 
-
     @Generated(hash = 726483236)
     public TodoItem(Long id, String taskName, String subTaskName, boolean completed,
             String createdAt, String updatedAt) {
@@ -57,7 +56,6 @@ public class TodoItem {
     @Generated(hash = 1307818545)
     public TodoItem() {
     }
-
 
     public Long getId() {
         return this.id;

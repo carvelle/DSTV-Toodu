@@ -72,14 +72,4 @@ public class AppDatabaseHelper implements DatabaseHelper {
         });
     }
 
-    @Override
-    public Observable<Boolean> saveTodoItemList(final List<TodoItem> todoItems) {
-        return Observable.fromCallable(new Callable<Boolean>() {
-            @Override
-            public Boolean call() throws Exception {
-                mDaoSession.getTodoItemDao().insertInTx(todoItems);
-                return true;
-            }
-        });
-    }
 }

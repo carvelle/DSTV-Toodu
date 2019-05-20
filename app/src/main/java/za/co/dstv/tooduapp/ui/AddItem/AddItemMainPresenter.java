@@ -1,7 +1,5 @@
 package za.co.dstv.tooduapp.ui.AddItem;
 
-import java.util.List;
-
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
@@ -33,7 +31,6 @@ public class AddItemMainPresenter<V extends AddItemView> extends BasePresenter<V
                             return;
                         }
                         if (itemSaved) {
-                            //getMvpView().refreshTodoItemList(todoItems);
                         }
                     }
                 }));

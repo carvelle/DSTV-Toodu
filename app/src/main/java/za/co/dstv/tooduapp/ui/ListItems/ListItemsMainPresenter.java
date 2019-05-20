@@ -90,7 +90,6 @@ public class ListItemsMainPresenter<V extends ListItemView> extends BasePresente
     @Override
     public void Completion(List<TodoItem> todoItems) {
 
-
         if (todoItems != null) {
             int completed = 0;
             for (TodoItem todoItem : todoItems) {
@@ -101,6 +100,5 @@ public class ListItemsMainPresenter<V extends ListItemView> extends BasePresente
             double progress = ((double)completed/(double)todoItems.size()) * 100;
             getMvpView().updateProgress((int)progress);
         }
-
     }
 }
