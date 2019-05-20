@@ -29,7 +29,7 @@ public class TodoItem {
 
     @Expose
     @SerializedName("completed")
-    @Property(nameInDb = "question_img_url")
+    @Property(nameInDb = "completed")
     private boolean completed;
 
     @Expose

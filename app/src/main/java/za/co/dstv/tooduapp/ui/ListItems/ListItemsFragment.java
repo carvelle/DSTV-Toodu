@@ -95,7 +95,7 @@ public class ListItemsFragment extends BaseFragment implements ListItemView{
             @Override
             public void onItemClick(TodoItem item, int position) {
                 mPresenter.deleteItem(item);
-                getBaseActivity().showMessage("Item with ID: " +item.getId() +" was deleted");
+                getBaseActivity().showMessage("Item with ID:" +item.getId() +" was deleted");
             }
         });
 
